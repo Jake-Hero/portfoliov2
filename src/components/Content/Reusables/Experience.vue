@@ -1,5 +1,5 @@
 <template>
-    <section class="border-left border-dark">
+    <section :class="'border-left ' + getTheme()">
         <h4 class="ml-3">{{ job }}</h4>
         <h5 class="ml-3">{{ company }}</h5>
         <h5 class="ml-3" v-if="deployed">{{ deployed }}</h5>
@@ -16,6 +16,11 @@ export default {
         deployed: {
             type: String,
             default: null,
+        }
+    },
+    methods: {
+        getTheme() {
+            return this.$store.state.darkMode ? "border-light" : "border-dark";
         }
     }
 }

@@ -1,6 +1,6 @@
 <template>
     <div class="d-flex justify-content-center mt-3 mb-3">
-        <div class="border border-dark p-3">
+        <div class="p-3">
             <b-container fluid class="d-flex align-items-center">
                 <b-row class="w-100" align-h="start">
                     <b-col class="d-flex align-items-center justify-content-center">
