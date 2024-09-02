@@ -1,28 +1,61 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div :class="getTheme()">
+    <b-container fluid>
+      <Navbar />
+      <SectionIntro />
+      <SectionAbout />
+      <SectionExp />
+      <SectionTools />
+      <SectionProjects />
+    </b-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import '@/assets/style.css';
+
+import Navbar from './components/Navbar/Navbar.vue';
+import SectionIntro from './components/Content/Section.Introduction.vue';
+import SectionAbout from './components/Content/Section.About.vue';
+import SectionExp from './components/Content/Section.Experience.vue'
+import SectionTools from './components/Content/Section.Tools.vue'
+import SectionProjects from './components/Content/Section.Projects.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    Navbar,
+    SectionIntro,
+    SectionAbout,
+    SectionExp,
+    SectionTools,
+    SectionProjects,
+  },
+  methods: {
+    getTheme() {
+      console.log(this.darkMode);
+      return this.darkMode ? "dark-theme" : "light-theme";
+    }
+  },
+  computed: {
+    darkMode: {
+      get() {
+        return this.$store.state.darkMode;
+      }
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+.dark-theme {
+  background-color: black;
+  color: white;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.light-theme {
+  background-color:white;
+  color: black;
+  transition: background-color 0.5s, color 0.5s;
 }
 </style>
