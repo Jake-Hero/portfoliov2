@@ -1,6 +1,6 @@
 <template>
   <div :class="getTheme()">
-    <b-container fluid>
+    <b-container>
       <Navbar />
       <SectionIntro />
       <SectionAbout />

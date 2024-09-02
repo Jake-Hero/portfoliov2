@@ -1,25 +1,29 @@
 <template>
-    <b-navbar :type="getTheme()" class="transparent-navbar border-bottom">
+    <b-navbar :type="getTheme()" class="transparent-navbar border-bottom" toggleable="lg">
         <b-navbar-brand>JR</b-navbar-brand>
 
-        <b-navbar-nav class="ml-auto">
-            <b-nav-item href="#home">Home</b-nav-item>
-            <b-nav-item href="#about">About</b-nav-item>
-            <b-nav-item href="#experience">Experience</b-nav-item>
-            <b-nav-item href="#tools">Tools</b-nav-item>
-            <b-nav-item href="#projects">Projects</b-nav-item>
+        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-            <b-nav-item href="#toggle">    
-                <b-form-group>
-                    <div class="d-flex align-items-center">
-                        <b-icon icon="brightness-high" class="mr-2"></b-icon>
-                        <b-form-checkbox id="toggle" v-model="darkMode" switch>
-                            <b-icon icon="moon" class="mr-2"></b-icon>
-                        </b-form-checkbox>
-                    </div>
-                </b-form-group>
-            </b-nav-item>
-        </b-navbar-nav>
+        <b-collapse id="nav-collapse" is-nav>
+            <b-navbar-nav class="ml-auto">
+                <b-nav-item href="#home">Home</b-nav-item>
+                <b-nav-item href="#about">About</b-nav-item>
+                <b-nav-item href="#experience">Experience</b-nav-item>
+                <b-nav-item href="#tools">Tools</b-nav-item>
+                <b-nav-item href="#projects">Projects</b-nav-item>
+
+                <b-nav-item href="#toggle">    
+                    <b-form-group>
+                        <div class="d-flex align-items-center">
+                            <b-icon icon="brightness-high" class="mr-2"></b-icon>
+                            <b-form-checkbox id="toggle" v-model="darkMode" switch>
+                                <b-icon icon="moon" class="mr-2"></b-icon>
+                            </b-form-checkbox>
+                        </div>
+                    </b-form-group>
+                </b-nav-item>
+            </b-navbar-nav>
+        </b-collapse>
     </b-navbar>
 </template>
 

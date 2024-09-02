@@ -1,11 +1,13 @@
 <template>
     <div>
-        <img 
+        <b-img 
             :src="svgResolve()" 
             style="height: auto; width: 50px;" 
-            :alt="name" 
+            fluid
+            :alt="icon" 
             :class="getTheme()"
-        />
+        >
+        </b-img>
     </div>
 </template>
 

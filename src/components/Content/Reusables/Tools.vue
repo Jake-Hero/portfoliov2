@@ -28,5 +28,6 @@ label {
     display: block;
     margin-top: 20px;
     font-family: 'monospace', monospace;
+    font-size: 18px;
 }
 </style>

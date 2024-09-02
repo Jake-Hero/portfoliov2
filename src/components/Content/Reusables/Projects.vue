@@ -1,20 +1,21 @@
 <template>
-    <section>
-        <div class="border border-dark text-center">
-            <div style="padding: 1rem">
-                <b-row align-h="start" style="height: 100%">
-                    <b-col>
+    <div class="d-flex justify-content-center mt-3 mb-3">
+        <div class="border border-dark p-3">
+            <b-container fluid class="d-flex align-items-center">
+                <b-row class="w-100" align-h="start">
+                    <b-col class="d-flex align-items-center justify-content-center">
                         <a :href="link" target="_blank">
-                            <img 
+                            <b-img 
                                 :src="imgResolve()" 
-                                style="height: auto; width: 200px;" 
+                                style="height: auto; width: 150px;" 
                                 :alt="name" 
-                            />
+                            >
+                            </b-img>
                         </a>
                     </b-col>
 
-                    <b-col>
-                        <label>{{ name }}</label>
+                    <b-col class="d-flex flex-column justify-content-center">
+                        <label class="font-weight-bolder">{{ name }}</label>
                         <label>{{ description }}</label>
                         <label>{{ date }}</label>
 
@@ -25,9 +26,9 @@
                         </div>
                     </b-col>
                 </b-row>
-            </div>
+            </b-container>
         </div>
-    </section>
+    </div>
 </template>
 
 <script>

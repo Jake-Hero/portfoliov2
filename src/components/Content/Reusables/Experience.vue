@@ -23,6 +23,7 @@ export default {
 
 <style scoped>
 h3 {
+    font-weight: bolder;
     font-family: 'monospace', monospace;
 }
 

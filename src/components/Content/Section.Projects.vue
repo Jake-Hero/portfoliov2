@@ -20,7 +20,7 @@
                         <ProjectInfo
                             icon="thesis"
                             name="Thesis Project Manager"
-                            description="Team/Document Management"
+                            description="Document Management"
                             language='["php", "jquery"]'
                             date="2022-23"
                         />
