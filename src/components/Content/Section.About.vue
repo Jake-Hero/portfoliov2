@@ -13,7 +13,7 @@
                 </p>
 
                 <p>
-                    I mostly like working on back-end development, but I can also work on front-end development when necessary.
+                    My expertise is in backend development, but recently I also developed quite a bit of expertise in frontend development.
                 </p>
             </div>
         </b-container>

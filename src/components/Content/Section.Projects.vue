@@ -1,5 +1,5 @@
 <template>
-    <section id="projects" style="padding: 5rem">
+    <section id="projects" style="padding-top: 5rem">
         <b-container>
             <h3>Projects</h3>
 
@@ -8,11 +8,10 @@
                     <b-col>
                         <ProjectInfo
                             icon="renegade"
-                            name="GTA Pinas"
+                            name="GTA Pinas Roleplay"
                             link="https://github.com/Jake-Hero/php-vanilla-GTAPinas"
-                            description="User Control Panel"
-                            language='["laravel", "php"]'
-                            date="2024"
+                            description="A user control panel made for a game server in San Andreas Multiplayer, it lets the user control their game account settings and their roleplay characters."
+                            language='["Laravel", "PHP"]'
                         />
                     </b-col>
 
@@ -20,9 +19,9 @@
                         <ProjectInfo
                             icon="thesis"
                             name="Thesis Project Manager"
-                            description="Document Management"
-                            language='["php", "jquery"]'
-                            date="2022-23"
+                            link="https://github.com/Jake-Hero/thesis-project-manager"
+                            description="A research project made back in my College Days with my Research Group, it aims to make the research paper collaboration and documentation easier and efficient."
+                            language='["PHP", "jQuery"]'
                         />
                     </b-col>
                 </b-row>

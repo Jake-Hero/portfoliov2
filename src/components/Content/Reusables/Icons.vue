@@ -2,7 +2,7 @@
     <div>
         <b-img 
             :src="svgResolve()" 
-            style="height: auto; width: 50px;" 
+            style="height: 50px; width: 50px;" 
             fluid
             :alt="icon" 
             :class="getTheme()"
@@ -17,6 +17,13 @@ import vue from '@/assets/svgs/vue.svg';
 import laravel from '@/assets/svgs/laravel.svg';
 import dotnet from '@/assets/svgs/dotnet.svg';
 import jquery from '@/assets/svgs/jquery.svg';
+import csharp from '@/assets/svgs/c-sharp.svg';
+import pawn from '@/assets/svgs/pawn.svg';
+import mysql from '@/assets/svgs/mysql.svg';
+import mssql from '@/assets/svgs/mssql.svg';
+import github from '@/assets/svgs/github-mark.svg';
+import jira from '@/assets/svgs/jira.svg';
+import tortoisesvn from '@/assets/svgs/tortoisesvn.svg';
 
 export default {
     props: {
@@ -35,6 +42,20 @@ export default {
                     return vue;
                 case "jquery":
                     return jquery;
+                case "c-sharp":
+                    return csharp;
+                case "pawn":
+                    return pawn;
+                case "mysql":
+                    return mysql;
+                case "mssql":
+                    return mssql;
+                case "github":
+                    return github;
+                case "jira":
+                    return jira;
+                case "tortoisesvn":
+                    return tortoisesvn;
             }
         },
         getTheme() {

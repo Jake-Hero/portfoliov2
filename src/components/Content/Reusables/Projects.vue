@@ -1,52 +1,47 @@
 <template>
     <div class="d-flex justify-content-center mt-3 mb-3">
-        <div class="p-3">
-            <b-container fluid class="d-flex align-items-center">
-                <b-row class="w-100" align-h="start">
-                    <b-col class="d-flex align-items-center justify-content-center">
-                        <a :href="link" target="_blank">
-                            <b-img 
-                                :src="imgResolve()" 
-                                style="height: auto; width: 150px;" 
-                                :alt="name" 
-                            >
-                            </b-img>
-                        </a>
-                    </b-col>
+        <b-card
+            :bg-variant="getBackground()"
+            :img-src="imgResolve()"
+            img-alt="Image"
+            img-top
+        >
+            <template #header>
+                <h4 :class="getTheme()">
+                    {{ name }}
+                </h4>
+            </template>
 
-                    <b-col class="d-flex flex-column justify-content-center">
-                        <label class="font-weight-bolder">{{ name }}</label>
-                        <label>{{ description }}</label>
-                        <label>{{ date }}</label>
+            <b-card-text :class="getTheme()">
+                {{ description }}
+            </b-card-text>
 
-                        <div class="icons-container" style="padding-top: 1rem">
-                            <div v-for="(lang, index) in parsedLanguage" :key="index" class="icon-item">
-                                <Icon :icon="lang" />
-                            </div>
-                        </div>
-                    </b-col>
-                </b-row>
-            </b-container>
-        </div>
+            <br />
+
+            <h5 :class="getTheme()">Tech Stack</h5>
+
+            <div v-for="(lang, index) in parsedLanguage" :key="index" style="display: inline-block; padding: 3px;">
+                <h4><b-badge :variant="getBadgeBackground()">{{ lang }}</b-badge></h4>
+            </div>
+
+            <div>
+                <h5><a :href="link" style="color: inherit;">View Project <b-icon-box-arrow-up-right></b-icon-box-arrow-up-right></a></h5>
+            </div>
+        </b-card>
     </div>
 </template>
 
 <script>
-import ccs from '@/assets/lpu_ccs.png';
-import renegade from '@/assets/gtapinas_logo.png';
-import Icon from './Icons.vue';
+import thesis from '@/assets/thesis.png';
+import renegade from '@/assets/gtapinas.png';
 
 export default {
-    components: {
-        Icon,
-    },
     props: {
         icon: String,
         name: String,
         description: String,
         language: String,
-        link: String,
-        date: String,
+        link: String
     },
     methods: {
         imgResolve() {
@@ -54,9 +49,18 @@ export default {
                 case "renegade":
                     return renegade;
                 case "thesis":
-                    return ccs;
+                    return thesis;
             }
         },
+        getTheme() {
+            return this.$store.state.darkMode ? "text-light" : "text-dark";
+        },
+        getBackground() {
+            return this.$store.state.darkMode ? "dark" : "light";
+        },
+        getBadgeBackground() {
+            return this.$store.state.darkMode ? "light" : "dark";
+        }
     },
     computed: {
         parsedLanguage() {

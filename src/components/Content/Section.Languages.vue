@@ -1,28 +1,28 @@
 <template>
     <section id="tools" style="padding-top: 5rem">
         <b-container>
-            <h3>Platform & Tools</h3>
+            <h3>Programming Languages</h3>
 
             <div style="padding-top: 3rem">
                 <b-row align-h="around">
                     <b-col>
                         <ToolInfo
-                            icon="github"
-                            name="Github"
+                            icon="php"
+                            name="PHP"
                         />
                     </b-col>
 
                     <b-col>
                         <ToolInfo
-                            icon="jira"
-                            name="Jira"
+                            icon="c-sharp"
+                            name="C#"
                         />
                     </b-col>
 
                     <b-col>
                         <ToolInfo
-                            icon="tortoisesvn"
-                            name="TortoiseSVN"
+                            icon="pawn"
+                            name="Pawn"
                         />
                     </b-col>
                 </b-row>

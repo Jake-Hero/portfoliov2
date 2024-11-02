@@ -15,24 +15,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- <b-container>
-            <div class="introduction">
-                <h3 class="special-left">Hello I am,</h3>
-                <h2 class="middle">Justine Rainiel Ramos</h2>
-                <h4 class="special-right">Full Stack Developer</h4>
-
-                <div class="icons">
-                    <a href="https://www.linkedin.com/in/justinerainielramos/" target="_blank">
-                        <b-icon icon="linkedin" class="h3 mr-2" :style="getTheme()"></b-icon>
-                    </a>
-
-                    <a href="https://github.com/Jake-Hero" target="_blank">
-                        <b-icon icon="github" class="h3 mr-2" :style="getTheme()"></b-icon>
-                    </a>
-                </div>
-            </div>
-        </b-container> -->
     </section>
 </template>
 

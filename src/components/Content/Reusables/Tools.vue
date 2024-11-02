@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="border text-center">
+        <div class="text-center">
             <div style="padding: 1rem">
                 <Icon :icon="icon" />
                 <label>{{ name }}</label>

@@ -9,7 +9,7 @@
                 <b-nav-item href="#home">Home</b-nav-item>
                 <b-nav-item href="#about">About</b-nav-item>
                 <b-nav-item href="#experience">Experience</b-nav-item>
-                <b-nav-item href="#tools">Tools</b-nav-item>
+                <b-nav-item href="#tools">Tech Stacks</b-nav-item>
                 <b-nav-item href="#projects">Projects</b-nav-item>
 
                 <b-nav-item href="#toggle">    
