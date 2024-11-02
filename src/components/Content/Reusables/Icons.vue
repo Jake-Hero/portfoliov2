@@ -24,6 +24,7 @@ import mssql from '@/assets/svgs/mssql.svg';
 import github from '@/assets/svgs/github-mark.svg';
 import jira from '@/assets/svgs/jira.svg';
 import tortoisesvn from '@/assets/svgs/tortoisesvn.svg';
+import javascript from '@/assets/svgs/javascript.svg';
 
 export default {
     props: {
@@ -56,6 +57,8 @@ export default {
                     return jira;
                 case "tortoisesvn":
                     return tortoisesvn;
+                case "javascript":
+                    return javascript;
             }
         },
         getTheme() {

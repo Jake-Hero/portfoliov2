@@ -21,6 +21,13 @@
 
                     <b-col>
                         <ToolInfo
+                            icon="javascript"
+                            name="Javascript"
+                        />
+                    </b-col>
+
+                    <b-col>
+                        <ToolInfo
                             icon="pawn"
                             name="Pawn"
                         />
